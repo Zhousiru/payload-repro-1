@@ -12,5 +12,26 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
+  upload: {
+    formatOptions: {
+      format: 'avif',
+    },
+    imageSizes: [
+      {
+        name: `100w`,
+        width: 100,
+        formatOptions: {
+          format: 'avif',
+        },
+      },
+      {
+        name: `200w`,
+        width: 200,
+        formatOptions: {
+          format: 'avif',
+        },
+      },
+    ],
+    adminThumbnail: '100w',
+  },
 }
